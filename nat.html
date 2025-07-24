@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Requirements - Networking With Bikash</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9fafb;
+      color: #222;
+    }
+    header {
+      background: #0f172a;
+      color: white;
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    footer {
+      text-align: center;
+      background: #1e293b;
+      color: white;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="logo">Networking With Bikash</div>
+  <nav class="clickstream">
+    <a href="index.html">Home</a>
+    <a href="subnetting.html">Subnetting</a>
+    <a href="ipv4andipv6.html">IPv4 and IPv6</a>
+    <a href="dns.html">DNS</a>
+    <a href="dhcp.html">DHCP</a>
+    <a href="routing.html">Routing</a>
+    <a href="nat.html">NAT</a>
+    <a href="security.html">Security</a>
+  </nav>
+</header>
+
+  <main>
+    <body>
+  <h1>Network Address Translation (NAT)</h1>
+  <p>
+    NAT is a technique that allows multiple devices on a private network to access the internet using a single public IP address. 
+    It translates private IP addresses into a public IP for external communication. 
+    NAT conserves IPv4 addresses and adds a layer of security by masking internal network details.
+  </p>
+
+  <h2>How NAT Works:</h2>
+  <ul>
+    <li><strong>Private vs. Public IPs:</strong> Private IPs are used within local networks, while public IPs are used on the internet.</li>
+    <li><strong>NAT Router:</strong> The router at the edge of the network (usually provided by your ISP) performs the translation.</li>
+    <li><strong>Translation:</strong> The NAT router replaces a device's private IP with its own public IP and records this in a translation table.</li>
+    <li><strong>Return Traffic:</strong> Incoming responses are matched with the translation table to route them back to the correct device.</li>
+  </ul>
+
+  <h2>Types of NAT:</h2>
+  <ul>
+    <li><strong>Static NAT:</strong> One-to-one mapping between a private IP and a public IP. Useful for servers needing internet access.</li>
+    <li><strong>Dynamic NAT:</strong> Maps private IPs to a pool of public IPs dynamically, as needed.</li>
+    <li><strong>Port Address Translation (PAT):</strong> Also called NAT Overload, it uses different port numbers to track multiple devices sharing one public IP.</li>
+  </ul>
+
+  <h2>Benefits of NAT:</h2>
+  <ul>
+    <li><strong>Address Conservation:</strong> Reduces the demand for public IPs, which are limited under IPv4.</li>
+    <li><strong>Security:</strong> Masks internal devices from the public internet.</li>
+    <li><strong>Cost Savings:</strong> Fewer public IPs needed, reducing costs.</li>
+    <li><strong>Network Flexibility:</strong> Makes network mergers and renumbering easier.</li>
+  </ul>
+
+  <h2>Disadvantages of NAT:</h2>
+  <ul>
+    <li><strong>Complexity:</strong> Can complicate network configuration and troubleshooting.</li>
+    <li><strong>Performance Overhead:</strong> Slight delay due to address translation.</li>
+    <li><strong>Limited Connectivity:</strong> Some apps and protocols may have trouble working behind NAT.</li>
+    <li><strong>Security Issues:</strong> Poor NAT configuration can introduce vulnerabilities.</li>
+    <li><strong>Complicates Tunneling:</strong> Makes protocols like IPsec harder to implement.</li>
+  </ul>
+</body>
+  </main>
+
+  <footer>
+    &copy; 2025 Networking With Bikash
+  </footer>
+</body>
+</html>

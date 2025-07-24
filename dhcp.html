@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Requirements - Networking With Bikash</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f4f4f4;
+      color: #222;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+    }
+
+    header .logo {
+      font-size: 1.8rem;
+      color: #fff;
+      font-weight: 700;
+      font-family: 'Playfair Display', serif;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a, .dropdown-btn {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 14px;
+      font-weight: 500;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    nav a:hover, .dropdown:hover .dropdown-btn {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 5px;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 40px;
+      background-color: white;
+      color: #000;
+      min-width: 180px;
+      border-radius: 6px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      z-index: 1001;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 12px 16px;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f3f4f6;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .hero {
+      height: 100vh;
+      background: url('/mnt/data/1ec53d2f-547d-4da6-9cda-f135631ba27c.png') center center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 100px 20px 40px;
+    }
+
+    .hero-content {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 40px;
+      border-radius: 10px;
+      color: white;
+      max-width: 800px;
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 20px;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .hero-content button {
+      padding: 12px 24px;
+      background: #f97316;
+      border: none;
+      color: white;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .hero-content button:hover {
+      background: #ea580c;
+    }
+
+    section {
+      display: none;
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    footer {
+      background: #1e293b;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+  </style>
+</head>
+<body>
+<header>
+  <div class="logo">Networking With Bikash</div>
+  <nav class="clickstream">
+    <a href="index.html">Home</a>
+    <a href="subnetting.html">Subnetting</a>
+    <a href="ipv4andipv6.html">IPv4 and IPv6</a>
+    <a href="dns.html">DNS</a>
+    <a href="dhcp.html">DHCP</a>
+    <a href="routing.html">Routing</a>
+    <a href="nat.html">NAT</a>
+    <a href="security.html">Security</a>
+  </nav>
+</header>
+
+  <main>
+    
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 40px;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    ul {
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>DHCP (Dynamic Host Configuration Protocol)</h1>
+  <p>
+    DHCP is a network protocol that automates the assignment of IP addresses and other network configuration parameters to devices on a network. 
+    It allows devices to connect to a network without manual configuration, making it easier to manage large networks.
+  </p>
+
+  <h2>What DHCP Does:</h2>
+  <ul>
+    <li><strong>Automatic IP Address Assignment:</strong> DHCP servers dynamically assign IP addresses to devices (clients) when they connect to the network.</li>
+    <li><strong>Other Configuration Parameters:</strong> Besides IP addresses, DHCP can also assign settings like subnet masks, default gateways, and DNS server addresses.</li>
+    <li><strong>Centralized Management:</strong> DHCP servers manage a pool of IP addresses and distribute them to clients, simplifying administration and reducing conflicts.</li>
+    <li><strong>Lease Times:</strong> IP addresses are assigned for a specific duration, enabling efficient usage especially in dynamic environments.</li>
+  </ul>
+
+  <h2>How DHCP Works:</h2>
+  <ol>
+    <li><strong>Discovery:</strong> A device broadcasts a DHCP discover message to locate servers.</li>
+    <li><strong>Offer:</strong> DHCP servers respond with available IP addresses and config info.</li>
+    <li><strong>Request:</strong> The client picks an offer and sends a request to the selected server.</li>
+    <li><strong>Acknowledgement:</strong> The server confirms and assigns the IP and settings to the client.</li>
+  </ol>
+
+  <h2>Key Concepts:</h2>
+  <ul>
+    <li><strong>DHCP Client:</strong> A device (computer, phone, etc.) that requests network config from a DHCP server.</li>
+    <li><strong>DHCP Server:</strong> Manages and distributes IP addresses and network settings.</li>
+    <li><strong>DHCP Relay Agent:</strong> Forwards DHCP messages between clients and servers on different segments.</li>
+    <li><strong>DHCP Lease:</strong> The time period an IP address is assigned to a client.</li>
+  </ul>
+
+  <h2>Benefits of DHCP:</h2>
+  <ul>
+    <li><strong>Simplified Network Setup:</strong> Devices connect without manual configuration.</li>
+    <li><strong>Reduced IP Address Conflicts:</strong> Centralized control avoids duplicates.</li>
+    <li><strong>Improved Network Scalability:</strong> Devices can be added/removed easily.</li>
+    <li><strong>Efficient IP Address Utilization:</strong> Leases allow dynamic reuse of addresses.</li>
+  </ul>
+  </main>
+
+  <footer>
+    &copy; 2025 Networking With Bikash
+  </footer>
+</body>
+</html>

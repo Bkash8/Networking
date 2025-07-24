@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Requirements - Networking With Bikash</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9fafb;
+      color: #222;
+    }
+    header {
+      background: #0f172a;
+      color: white;
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    footer {
+      text-align: center;
+      background: #1e293b;
+      color: white;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="logo">Networking With Bikash</div>
+  <nav class="clickstream">
+    <a href="index.html">Home</a>
+    <a href="subnetting.html">Subnetting</a>
+    <a href="ipv4andipv6.html">IPv4 and IPv6</a>
+    <a href="dns.html">DNS</a>
+    <a href="dhcp.html">DHCP</a>
+    <a href="routing.html">Routing</a>
+    <a href="nat.html">NAT</a>
+    <a href="security.html">Security</a>
+  </nav>
+</header>
+
+  <main>
+    <body>
+  <h1>Routing in Networking</h1>
+  <p>
+    Routing is the process of selecting the best path for data packets to travel from a source to a destination across a network. 
+    It ensures efficient and reliable communication by determining the optimal path for data to follow. 
+    Routing is performed by Layer 3 (network layer) devices like routers, which use routing tables to make forwarding decisions.
+  </p>
+
+  <h2>1. Core Concepts:</h2>
+  <ul>
+    <li><strong>Path Selection:</strong> Routing is about choosing the best path for data packets to reach their destination.</li>
+    <li><strong>Network Layer:</strong> Routing takes place at Layer 3 (Network Layer) of the OSI model using IP addresses.</li>
+    <li><strong>Routers:</strong> Routers examine destination IP addresses and use routing tables to determine the next hop.</li>
+    <li><strong>Routing Tables:</strong> These tables contain information about network topology and help routers make path decisions.</li>
+  </ul>
+
+  <h2>2. How Routing Works:</h2>
+  <ol>
+    <li>A device sends a packet to a router.</li>
+    <li>The router checks the packet’s destination IP address.</li>
+    <li>Using its routing table, it selects the best next hop to reach the destination.</li>
+    <li>The packet is forwarded to the next hop; this continues until it reaches its final destination.</li>
+  </ol>
+
+  <h2>3. Types of Routing:</h2>
+  <ul>
+    <li><strong>Static Routing:</strong> Manually configured by a network administrator.</li>
+    <li><strong>Dynamic Routing:</strong> Uses routing protocols like RIP, OSPF, or BGP to automatically discover and update routes.</li>
+    <li><strong>Hybrid Routing:</strong> Combines both static and dynamic routing techniques.</li>
+  </ul>
+
+  <h2>4. Routing Protocols:</h2>
+  <ul>
+    <li><strong>Distance Vector Protocols:</strong> e.g., RIP – share routing information with neighboring routers.</li>
+    <li><strong>Link-State Protocols:</strong> e.g., OSPF, IS-IS – flood the network with topology information for more informed decisions.</li>
+    <li><strong>Border Gateway Protocol (BGP):</strong> Used to exchange routing information between autonomous systems (AS) across the internet.</li>
+  </ul>
+
+  <h2>5. Importance of Routing:</h2>
+  <ul>
+    <li><strong>Efficient Data Transmission:</strong> Ensures packets take the most efficient path, reducing latency.</li>
+    <li><strong>Reliable Communication:</strong> Adapts to network changes to maintain data delivery even during failures.</li>
+    <li><strong>Scalability:</strong> Allows networks to grow and connect with others without disruption.</li>
+  </ul>
+</body>
+  </main>
+
+  <footer>
+    &copy; 2025 Networking With Bikash
+  </footer>
+</body>
+</html>

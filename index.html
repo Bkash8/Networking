@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Networking With Bikash</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+
+      font-family: 'Inter', sans-serif;
+      background-color: #f4f4f4;
+      color: #222;
+
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      color: #fff;
+      font-weight: 700;
+      font-family: 'Playfair Display', serif;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a, .dropdown-btn {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 14px;
+      font-weight: 500;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    nav a:hover, .dropdown:hover .dropdown-btn {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 5px;
+    }
+
+    .hero {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url('https://github.com/Bkash8/Networking/blob/main/networkking.jpg?raw=true') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero-content {
+      color: white;
+      max-width: 800px;
+    }
+
+    .hero-content h1 {
+      font-size: 48px;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 20px;
+    }
+
+    .hero-content p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .hero-content .cta-button {
+      background-color: #f97316;
+      color: white;
+      padding: 14px 28px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .hero-content .cta-button:hover {
+      background-color: #ea580c;
+    }
+
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 36px;
+      }
+      nav ul {
+        flex-direction: column;
+        gap: 15px;
+      }
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+    footer {
+      background: #1e293b;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Networking With Bikash</div>
+    <nav class="clickstream">
+      
+        <a href="index.html">Home</a>
+        <a href="subnetting.html">Subnetting</a>
+        <a href="ipv4andipv6.html">IPv4 and IPv6</a>
+        <a href="dns.html">DNS</a>
+        <a href="dhcp.html">DHCP</a>
+        <a href="routing.html">Routing</a>
+        <a href="nat.html">NAT</a>
+        <a href="security.html">Security</a>
+     
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Networking in Daily Practice</h1>
+      <p>
+        Every click, stream, and message you send relies on powerful networking behind the scenes. 
+        From smooth video calls to lightning-fast file transfers, networking connects devices, routes 
+        data, and keeps everything secure. Whether at home, in the office, or across the globe — 
+        smart networking ensures you're always connected, always protected. <strong>Fast. Reliable. Everywhere.</strong>
+      </p>
+      <a href="#" class="cta-button">Explore Now</a>
+    </div>
+  </section>
+    <footer>
+    <p>&copy; 2025 Networking With Bikash | All rights reserved.</p>
+    </footer>
+<script>
+  function showTab(tabId) {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => section.classList.remove('active'));
+    document.getElementById(tabId).classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>

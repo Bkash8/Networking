@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Requirements - Networking With Bikash</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9fafb;
+      color: #222;
+    }
+    header {
+      background: #0f172a;
+      color: white;
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    footer {
+      text-align: center;
+      background: #1e293b;
+      color: white;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="logo">Networking With Bikash</div>
+  <nav class="clickstream">
+    <a href="index.html">Home</a>
+    <a href="subnetting.html">Subnetting</a>
+    <a href="ipv4andipv6.html">IPv4 and IPv6</a>
+    <a href="dns.html">DNS</a>
+    <a href="dhcp.html">DHCP</a>
+    <a href="routing.html">Routing</a>
+    <a href="nat.html">NAT</a>
+    <a href="security.html">Security</a>
+  </nav>
+</header>
+
+  <main>
+<body>
+  <h1>IPv4 vs IPv6</h1>
+  <p>
+    IPv4 and IPv6 are versions of the Internet Protocol. IPv6 was developed to address the limitations of IPv4, 
+    primarily its limited address space. IPv4 uses 32-bit addresses, supporting around 4.3 billion unique addresses, 
+    while IPv6 uses 128-bit addresses, offering an almost limitless number of IP addresses.
+  </p>
+
+  <h2>IPv4:</h2>
+  <ul>
+    <li><strong>Address Size:</strong> 32 bits, resulting in approximately 4.3 billion unique IP addresses.</li>
+    <li><strong>Address Representation:</strong> Uses dotted-decimal notation (e.g., <code>192.168.1.1</code>).</li>
+    <li><strong>Limitations:</strong> Suffering from address exhaustion, less efficient routing, and weaker security.</li>
+    <li><strong>Use Cases:</strong> Still widely used in most networks, but increasingly replaced by IPv6.</li>
+  </ul>
+
+  <h2>IPv6:</h2>
+  <ul>
+    <li><strong>Address Size:</strong> 128 bits, allowing for a vastly expanded address space.</li>
+    <li><strong>Address Representation:</strong> Uses hexadecimal notation separated by colons (e.g., <code>2001:0db8:85a3:0000:0000:8a2e:0370:7334</code>).</li>
+    <li><strong>Advantages:</strong></li>
+    <ul>
+      <li><strong>Larger Address Space:</strong> Eliminates the need for NAT and solves IPv4 address exhaustion.</li>
+      <li><strong>Improved Security:</strong> Includes built-in support for IPsec (Internet Protocol Security).</li>
+      <li><strong>Simplified Routing:</strong> Uses a more efficient header structure and routing process.</li>
+      <li><strong>Auto-Configuration:</strong> Devices can self-configure without manual input or DHCP.</li>
+      <li><strong>Enhanced Quality of Service (QoS):</strong> Better handling of time-sensitive data like voice and video.</li>
+    </ul>
+    <li><strong>Use Cases:</strong> Designed to eventually replace IPv4 and support the growing number of internet-connected devices.</li>
+  </ul>
+
+  <h2>Key Differences Summary:</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Feature</th>
+        <th>IPv4</th>
+        <th>IPv6</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Address Size</td>
+        <td>32 bits</td>
+        <td>128 bits</td>
+      </tr>
+      <tr>
+        <td>Address Representation</td>
+        <td>Dotted-decimal</td>
+        <td>Hexadecimal with colons</td>
+      </tr>
+      <tr>
+        <td>Security</td>
+        <td>Limited built-in security</td>
+        <td>Built-in IPsec support</td>
+      </tr>
+      <tr>
+        <td>Routing</td>
+        <td>More complex</td>
+        <td>Simpler and more efficient</td>
+      </tr>
+      <tr>
+        <td>Address Space</td>
+        <td>Limited</td>
+        <td>Vastly expanded</td>
+      </tr>
+      <tr>
+        <td>Header Format</td>
+        <td>More complex</td>
+        <td>Simpler</td>
+      </tr>
+      <tr>
+        <td>NAT (Network Address Translation)</td>
+        <td>Commonly used</td>
+        <td>Not typically needed</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+  </main>
+
+  <footer>
+    &copy; 2025 Networking With Bikash
+  </footer>
+</body>
+</html>

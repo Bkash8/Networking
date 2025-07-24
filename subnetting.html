@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Requirements - Networking With Bikash</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9fafb;
+      color: #222;
+    }
+    header {
+      background: #0f172a;
+      color: white;
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    footer {
+      text-align: center;
+      background: #1e293b;
+      color: white;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="logo">Networking With Bikash</div>
+  <nav class="clickstream">
+    <a href="index.html">Home</a>
+    <a href="subnetting.html">Subnetting</a>
+    <a href="ipv4andipv6.html">IPv4 and IPv6</a>
+    <a href="dns.html">DNS</a>
+    <a href="dhcp.html">DHCP</a>
+    <a href="routing.html">Routing</a>
+    <a href="nat.html">NAT</a>
+    <a href="security.html">Security</a>
+  </nav>
+</header>
+
+  <main>
+    <body>
+  <h1>Subnetting</h1>
+  <p>
+    Subnetting is a networking technique used to divide a larger network into smaller, more manageable subnetworks (subnets). 
+    It helps with better organization, efficient IP address allocation, and improved performance and security.
+  </p>
+
+  <h2>1. Purpose:</h2>
+  <ul>
+    <li><strong>Organization:</strong> Groups devices logically based on function or location for easier administration.</li>
+    <li><strong>Efficiency:</strong> Reduces broadcast domains, improving network performance.</li>
+    <li><strong>Security:</strong> Isolates subnets to limit security breaches and control resource access.</li>
+    <li><strong>IP Address Management:</strong> Prevents IP wastage and enables efficient address usage.</li>
+  </ul>
+
+  <h2>2. How It Works:</h2>
+  <ul>
+    <li><strong>Subnet Mask:</strong> Determines which part of the IP address is for the network and which is for the host.</li>
+    <li><strong>Borrowing Bits:</strong> Bits from the host portion are borrowed to create more subnets.</li>
+    <li><strong>Binary Representation:</strong> Subnetting relies on binary math to distinguish the network and host portions.</li>
+    <li><strong>Example:</strong> 
+      In a Class C network (<code>255.255.255.0</code>), borrowing 2 bits changes the subnet mask to 
+      <code>255.255.255.192</code>. This results in 4 subnets with 62 usable host addresses each.
+    </li>
+  </ul>
+
+  <h2>3. Benefits:</h2>
+  <ul>
+    <li><strong>Reduced Broadcast Traffic:</strong> Limits broadcast traffic to a subnet, improving efficiency.</li>
+    <li><strong>Enhanced Security:</strong> Helps contain threats within subnets.</li>
+    <li><strong>Simplified Management:</strong> Easier to organize, monitor, and troubleshoot network segments.</li>
+    <li><strong>Efficient IP Address Usage:</strong> Prevents IP waste, especially in large-scale networks.</li>
+  </ul>
+
+  <h2>4. Key Terms:</h2>
+  <ul>
+    <li><strong>Subnet:</strong> A smaller, logical division of a larger network.</li>
+    <li><strong>Subnet Mask:</strong> A 32-bit number indicating the network and host parts of an IP address.</li>
+    <li><strong>CIDR (Classless Inter-Domain Routing):</strong> A shorthand way to denote subnet masks, e.g., <code>/24</code>.</li>
+    <li><strong>Network ID:</strong> The first address in a subnet, identifying the subnet itself.</li>
+    <li><strong>Broadcast ID:</strong> The last address in a subnet, used for broadcasting to all devices within the subnet.</li>
+    <li><strong>First Host ID:</strong> The first usable IP address in a subnet (after the Network ID).</li>
+    <li><strong>Last Host ID:</strong> The last usable IP address before the Broadcast ID.</li>
+  </ul>
+</body>
+  </main>
+
+  <footer>
+    &copy; 2025 Networking With Bikash
+  </footer>
+</body>
+</html>
